@@ -1,5 +1,6 @@
 <template>
     <button
+        v-if="subItems.length > 0"
         type="button"
         class="w-full px-6 py-3 rounded hover:bg-gray-900 transition duration-300 ease-in-out"
         :class="{ 'bg-gray-900': $page.url.startsWith(link) }"
@@ -24,8 +25,8 @@
         </div>
 
         <div
-            v-if="subItems.length > 0 && showSubItems"
-            class="w-full mt-3 flex flex-col"
+            class="w-full mt-3"
+            :class="showSubItems ? 'flex flex-col' : 'hidden'"
         >
             <Link
                 v-for="subItem in subItems"
@@ -37,6 +38,15 @@
             </Link>
         </div>
     </button>
+
+    <Link
+        v-else
+        :href="link"
+        class="w-full px-6 py-3 flex items-center rounded text-md font-medium text-gray-300 hover:bg-gray-900 transition duration-300 ease-in-out"
+        :class="{ 'bg-gray-900': $page.url.startsWith(link) }"
+    >
+        <slot />
+    </Link>
 </template>
 
 <script>
