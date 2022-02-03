@@ -1,5 +1,7 @@
 <template>
-    <div class="relative z-0 w-screen h-screen overflow-hidden flex flex-col">
+    <div
+        class="relative z-0 w-screen h-screen overflow-hidden flex flex-col bg-gray-300"
+    >
         <Header />
 
         <Main>
@@ -9,8 +11,8 @@
 </template>
 
 <script>
-import Header from "../Shared/Header";
-import Main from "../Shared/Main";
+import Header from "@/Shared/Components/Header";
+import Main from "@/Shared/Components/Main";
 
 export default {
     components: {

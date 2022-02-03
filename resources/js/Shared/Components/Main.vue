@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import Sidebar from "../Shared/Sidebar";
-import Content from "../Shared/Content";
+import Sidebar from "@/Shared/Components/Sidebar";
+import Content from "@/Shared/Components/Content";
 
 export default {
     components: {

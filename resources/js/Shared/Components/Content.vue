@@ -1,5 +1,5 @@
 <template>
-    <div class="relative z-10 overflow-auto p-4 flex-1 bg-gray-200">
+    <div class="relative z-10 overflow-auto p-4 flex-1">
         <slot />
     </div>
 </template>

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Wrapper from "../Shared/Wrapper";
+import Wrapper from "@/Shared/Components/Wrapper";
 
 export default {
     components: {
